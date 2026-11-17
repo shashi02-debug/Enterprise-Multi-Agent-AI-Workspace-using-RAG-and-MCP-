@@ -1,0 +1,1073 @@
+/* =========================================================
+   ENTERPRISE AI WORKSPACE
+   AGENTS PAGE
+   ========================================================= */
+
+.agents-page {
+  width: 100%;
+  min-height: 100%;
+
+  background: #ffffff;
+
+  color: #211e2d;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.agents-hero {
+  width: 100%;
+
+  padding: 62px 40px 58px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(105, 65, 232, 0.11),
+      transparent 48%
+    ),
+    #fcfbff;
+
+  border-bottom: 1px solid #eeeaf6;
+}
+
+.agents-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  border: 1px solid #e5defb;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #6941e8;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  letter-spacing: 0.04em;
+
+  box-shadow:
+    0 6px 20px rgba(80, 50, 150, 0.05);
+}
+
+.agents-hero h1 {
+  max-width: 850px;
+
+  margin: 25px auto 14px;
+
+  color: #171523;
+
+  font-size: clamp(38px, 4.5vw, 60px);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+
+  font-weight: 800;
+}
+
+.agents-hero h1 span {
+  color: #6941e8;
+}
+
+.agents-hero p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #817a91;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+.agents-section {
+  width: min(1180px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 48px 0 8px;
+}
+
+.agents-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 22px;
+}
+
+.agents-section-heading h2 {
+  margin: 0 0 5px;
+
+  color: #201d2c;
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+.agents-section-heading p {
+  margin: 0;
+
+  color: #898296;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.agents-live-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #e6f3ed;
+
+  border-radius: 10px;
+
+  background: #fbfffd;
+
+  color: #5e7c70;
+
+  font-size: 11px;
+
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+.agents-live-status > span,
+.agent-status > span,
+.agents-result-success > span {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: #35c98a;
+}
+
+/* =========================================================
+   AGENT GRID
+   ========================================================= */
+
+.agents-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================================================
+   AGENT CARD
+   ========================================================= */
+
+.agent-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #ebe7f4;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(54, 39, 92, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #ded5f5;
+
+  box-shadow:
+    0 16px 34px rgba(54, 39, 92, 0.09);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.agent-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px 20px 10px;
+}
+
+.agent-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #f0ebff;
+
+  color: #6941e8;
+
+  font-size: 18px;
+}
+
+.agent-number {
+  color: #b0a9bd;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.agent-card-body {
+  padding: 8px 20px 21px;
+}
+
+.agent-name-row {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.agent-name-row h3 {
+  min-width: 0;
+
+  margin: 0;
+
+  color: #211e2d;
+
+  font-size: 17px;
+
+  line-height: 1.35;
+
+  font-weight: 750;
+}
+
+.agent-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex: 0 0 auto;
+
+  color: #5f7d70;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.agent-role {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #6941e8;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.agent-description {
+  margin: 14px 0 17px;
+
+  color: #817a91;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+.agent-capabilities {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.agent-capabilities span {
+  padding: 6px 9px;
+
+  border: 1px solid #eeeaf6;
+
+  border-radius: 8px;
+
+  background: #faf9fd;
+
+  color: #777084;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   AGENT FLOW
+   ========================================================= */
+
+.agent-flow {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 25px;
+
+  border: 1px solid #ebe7f4;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 28px rgba(54, 39, 92, 0.04);
+
+  overflow-x: auto;
+}
+
+.agent-flow-step {
+  min-width: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 17px;
+
+  border: 1px solid #eeeaf6;
+
+  border-radius: 13px;
+
+  background: #fcfbff;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.agent-flow-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 8px;
+
+  border-radius: 10px;
+
+  background: #f0ebff;
+
+  color: #6941e8;
+
+  font-size: 15px;
+}
+
+.agent-flow-step strong {
+  color: #282432;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.agent-flow-step span {
+  margin-top: 4px;
+
+  color: #9991a5;
+
+  font-size: 10px;
+}
+
+.agent-flow-arrow {
+  flex: 0 0 auto;
+
+  color: #a297b5;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   TEST SECTION
+   ========================================================= */
+
+.agents-test-section {
+  width: min(1180px, calc(100% - 80px));
+
+  margin: 40px auto 0;
+
+  padding: 28px;
+
+  border: 1px solid #e5defb;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbfaff,
+      #ffffff
+    );
+
+  box-shadow:
+    0 14px 36px rgba(67, 45, 120, 0.06);
+}
+
+.agents-test-label {
+  color: #6941e8;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.agents-test-header h2 {
+  margin: 7px 0 5px;
+
+  color: #211e2d;
+
+  font-size: 21px;
+
+  font-weight: 750;
+}
+
+.agents-test-header p {
+  margin: 0;
+
+  color: #888094;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TEST INPUT
+   ========================================================= */
+
+.agents-test-box {
+  margin-top: 20px;
+}
+
+.agents-test-input-row {
+  display: flex;
+
+  gap: 10px;
+}
+
+.agents-test-input-row input {
+  min-width: 0;
+
+  flex: 1;
+
+  height: 45px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e2dced;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #292532;
+
+  font-family: inherit;
+
+  font-size: 12px;
+}
+
+.agents-test-input-row input::placeholder {
+  color: #aaa2b4;
+}
+
+.agents-test-input-row input:focus {
+  border-color: #9c82ed;
+
+  box-shadow:
+    0 0 0 3px rgba(
+      105,
+      65,
+      232,
+      0.08
+    );
+}
+
+.agents-test-input-row button {
+  height: 45px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: #6941e8;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.agents-test-input-row button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  background: #5932d0;
+}
+
+.agents-test-input-row button:disabled {
+  opacity: 0.5;
+}
+
+/* =========================================================
+   TEST ERROR
+   ========================================================= */
+
+.agents-test-error {
+  margin-top: 14px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #f0dede;
+
+  border-radius: 10px;
+
+  background: #fffafa;
+
+  color: #a04b4b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TEST RESULT
+   ========================================================= */
+
+.agents-test-result {
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e7e1f2;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+}
+
+.agents-result-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 18px;
+
+  border-bottom: 1px solid #eeeaf5;
+}
+
+.agents-result-header > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.agents-result-header span {
+  color: #8d859a;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+}
+
+.agents-result-header strong {
+  color: #282432;
+
+  font-size: 13px;
+}
+
+.agents-result-success {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #5e7c70;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESULT FLOW
+   ========================================================= */
+
+.agents-result-flow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 17px 18px;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+}
+
+.agents-result-step {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  white-space: nowrap;
+}
+
+.agents-result-step > span {
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #f0ebff;
+
+  color: #6941e8;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.agents-result-step strong {
+  color: #413c4c;
+
+  font-size: 11px;
+}
+
+.agents-result-step b {
+  margin-left: 5px;
+
+  color: #aaa1b7;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESULT DETAILS
+   ========================================================= */
+
+.agents-result-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid #eeeaf5;
+}
+
+.agents-result-details > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 13px 18px;
+}
+
+.agents-result-details > div + div {
+  border-left: 1px solid #eeeaf5;
+}
+
+.agents-result-details span {
+  color: #8c8497;
+
+  font-size: 10px;
+}
+
+.agents-result-details strong {
+  color: #2a2634;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   RESULT SOURCES
+   ========================================================= */
+
+.agents-result-sources {
+  padding: 16px 18px;
+
+  border-top: 1px solid #eeeaf5;
+}
+
+.agents-result-sources > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #6f687b;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.agents-result-sources > div {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.agents-result-sources > div span {
+  padding: 7px 10px;
+
+  border: 1px solid #ece7f5;
+
+  border-radius: 8px;
+
+  background: #faf9fd;
+
+  color: #6f687b;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   BOTTOM NOTE
+   ========================================================= */
+
+.agents-note {
+  width: min(1180px, calc(100% - 80px));
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 30px auto 45px;
+
+  padding: 17px 19px;
+
+  border: 1px solid #eeeaf5;
+
+  border-radius: 14px;
+
+  background: #fcfbff;
+}
+
+.agents-note-icon {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #f0ebff;
+
+  color: #6941e8;
+}
+
+.agents-note strong {
+  color: #393441;
+
+  font-size: 12px;
+}
+
+.agents-note p {
+  margin: 4px 0 0;
+
+  color: #8c8497;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .agents-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .agents-section,
+  .agents-test-section,
+  .agents-note {
+    width: calc(100% - 50px);
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .agents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-flow {
+    justify-content: flex-start;
+  }
+
+  .agents-result-details {
+    grid-template-columns: 1fr;
+  }
+
+  .agents-result-details > div + div {
+    border-left: none;
+
+    border-top: 1px solid #eeeaf5;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .agents-hero {
+    padding: 45px 20px 42px;
+  }
+
+  .agents-hero h1 {
+    font-size: 38px;
+  }
+
+  .agents-section,
+  .agents-test-section,
+  .agents-note {
+    width: calc(100% - 30px);
+  }
+
+  .agents-section {
+    padding-top: 36px;
+  }
+
+  .agents-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .agents-live-status {
+    align-self: flex-start;
+  }
+
+  .agents-test-section {
+    padding: 20px;
+  }
+
+  .agents-test-input-row {
+    flex-direction: column;
+  }
+
+  .agents-test-input-row button {
+    width: 100%;
+  }
+
+  .agent-flow {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    overflow: visible;
+  }
+
+  .agent-flow-step {
+    width: 100%;
+  }
+
+  .agent-flow-arrow {
+    transform: rotate(90deg);
+
+    align-self: center;
+  }
+
+  .agents-result-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .agents-result-flow {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .agents-result-step {
+    width: 100%;
+  }
+
+  .agents-note {
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .agents-hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .agents-hero h1 {
+    font-size: 33px;
+  }
+
+  .agents-section,
+  .agents-test-section,
+  .agents-note {
+    width: calc(100% - 20px);
+  }
+
+  .agent-card-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+}
+/* =========================================================
+   AGENTS PAGE CLEANUP
+   ========================================================= */
+
+/*
+   The live workflow tester is not part of the
+   final Agents page UI.
+*/
+.agents-test-section {
+  display: none !important;
+}
+
+
+/*
+   Keep the LangGraph information note as the
+   final informational section.
+*/
+.agents-note {
+  margin-top: 34px;
+  margin-bottom: 50px;
+}

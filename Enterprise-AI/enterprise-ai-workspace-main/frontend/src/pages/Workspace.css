@@ -1,0 +1,272 @@
+/* =========================================================
+   WORKSPACE PAGE
+   ========================================================= */
+
+.workspace-page {
+  width: 100%;
+  min-width: 0;
+}
+
+.hero {
+  width: 100%;
+  min-height: 545px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 74px 40px 70px;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(117, 78, 238, 0.12),
+      transparent 45%
+    ),
+    #fbfaff;
+}
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.hero-badge {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 17px;
+  border: 1px solid #ddd5f5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #6945df;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.35px;
+  box-shadow: 0 5px 20px rgba(91, 60, 180, 0.05);
+}
+
+.hero-badge span {
+  font-size: 13px;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.hero h2 {
+  max-width: 1000px;
+  margin: 40px 0 0;
+  color: #181620;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: 0.99;
+  font-weight: 850;
+  letter-spacing: -3.5px;
+}
+
+.hero h2 span {
+  color: #6b46e8;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero > p {
+  max-width: 780px;
+  margin: 25px auto 0;
+  color: #777183;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   CHAT INPUT
+   ========================================================= */
+
+.search-box {
+  width: min(920px, 100%);
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+  padding-left: 20px;
+  border: 1px solid #ded8eb;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(74, 47, 143, 0.08);
+  overflow: hidden;
+}
+
+.search-box:focus-within {
+  border-color: #cbbcf0;
+  box-shadow:
+    0 0 0 3px rgba(105, 65, 232, 0.06),
+    0 15px 40px rgba(74, 47, 143, 0.08);
+}
+
+.search-icon {
+  width: 24px;
+  flex: 0 0 24px;
+  color: #7651e8;
+  font-size: 16px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  height: 64px;
+  padding: 0 16px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #282431;
+  font-size: 15px;
+}
+
+.search-box input::placeholder {
+  color: #aaa3b3;
+}
+
+.search-box button {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 14px;
+  background: #6844e5;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.search-box button:hover:not(:disabled) {
+  background: #5935d3;
+  transform: translateX(1px);
+}
+
+.search-box button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   WORKSPACE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .hero {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .hero h2 {
+    font-size: clamp(46px, 6vw, 68px);
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 500px;
+    padding: 60px 24px 55px;
+  }
+
+  .hero h2 {
+    font-size: clamp(42px, 7vw, 60px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero > p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    padding: 52px 18px 50px;
+  }
+
+  .hero-badge {
+    min-height: 42px;
+    padding: 0 14px;
+    font-size: 10px;
+  }
+
+  .hero h2 {
+    margin-top: 31px;
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.03;
+    letter-spacing: -2px;
+  }
+
+  .hero > p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .search-box {
+    min-height: 58px;
+    margin-top: 28px;
+    padding-left: 14px;
+    border-radius: 15px;
+  }
+
+  .search-box input {
+    height: 56px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .search-box button {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+    margin-right: 5px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 44px 14px 44px;
+  }
+
+  .hero h2 {
+    font-size: 37px;
+  }
+
+  .hero > p {
+    font-size: 14px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-icon {
+    font-size: 13px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h2 {
+    font-size: 33px;
+  }
+
+  .hero-badge {
+    font-size: 9px;
+  }
+}
